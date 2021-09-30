@@ -1,6 +1,6 @@
-import { Avatar, Button } from "antd";
+import {  Button } from "antd";
 import React, { useEffect, useState } from "react";
-import { UserOutlined,HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined} from "@ant-design/icons";
+import {HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined} from "@ant-design/icons";
 import { Typography } from "antd";
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
@@ -32,7 +32,7 @@ const Navbar = () => {
     <div className="nav-container">
       <div className="logo-container">
         {/* <Avatar src={icon} size="large" /> */}
-        <Typography.Title level={2} className="logo"><Link to="/">Cryptoverse</Link></Typography.Title>
+        <Title level={2} className="logo"><Link to="/">Cryptoverse</Link></Title>
         <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>
       </div>
       {activeMenu && (
