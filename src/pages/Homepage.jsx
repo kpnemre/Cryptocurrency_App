@@ -1,19 +1,17 @@
 import React from "react";
-import "./Homepage.css";
 import { Alert, Col, Row, Spin, Statistic, Typography } from "antd";
-import { useGetCryptosQuery } from "../../services/cyrptoApi";
+import { useGetCryptosQuery } from "../services/cyrptoApi";
 import millify from "millify";
 import { Link } from "react-router-dom";
-import {Ctyptocurrencies } from "../Ctyptocurrencies/Ctyptocurrencies"
-import {News } from "../News/News"
+import {Ctyptocurrencies, News } from "./index"
 
 const { Title } = Typography;
 
 export const Homepage = () => {
-  const { data, isLoading, isError } = useGetCryptosQuery();
+  const { data, isLoading, isError } = useGetCryptosQuery(10);
 
   const globalStats = data?.data?.stats;
-  console.log("dtaa", globalStats);
+  // console.log("dtaa", data);
 
   if (isLoading) {
     <Spin size="large" />;
@@ -36,7 +34,7 @@ export const Homepage = () => {
 
     <div className="home-heading-container">
       <Title level={2} className="home-title">Top 10 Cryptos In The World</Title>
-      <Title level={3} className="show-more"><Link to="/cryptocurrencies">Show more</Link></Title>
+      <Title level={3} className="show-more"><Link to="/ctyptocurrencies">Show more</Link></Title>
     </div>
     <Ctyptocurrencies simplified />
     <div className="home-heading-container">

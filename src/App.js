@@ -28,12 +28,15 @@ const App = () => {
             <Route exact path="/news" component={News} />
             <Route exact path="/" component={Homepage} />
           </Switch>
+
+          <Footer />
           
         </div>
       
-            <Footer />
+          
       
       </div>
+      
     </Router>
   );
 };
