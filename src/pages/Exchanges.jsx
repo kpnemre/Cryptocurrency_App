@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Exchanges = () => {
+ const Exchanges = () => {
     return (
         <div>
             eslem
@@ -8,4 +8,4 @@ export const Exchanges = () => {
     )
 }
 
-
+export default  Exchanges;

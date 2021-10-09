@@ -27,7 +27,7 @@ import LineChart from '.././components/LineChart';
 const { Title, Text } = Typography;
 const { Option } = Select;
 
-export const CryptoDetail = () => {
+ const CryptoDetail = () => {
   // coinId react-router-dom üzerinden
 
   const { coinId } = useParams();
@@ -210,6 +210,8 @@ export const CryptoDetail = () => {
     </Col>
   );
 };
+
+export default CryptoDetail;
 
 // allTimeHigh: {price: '64185.10833403135', timestamp: 1618358400000}
 // approvedSupply: true

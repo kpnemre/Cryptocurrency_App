@@ -10,7 +10,7 @@ const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=Ne
 const { Text, Title } = Typography;
 const { Option } = Select;
 
-export const News = ({ simplified }) => {
+ const News = ({ simplified }) => {
 
     const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
     const { data } = useGetCryptosQuery(100);
@@ -60,3 +60,4 @@ export const News = ({ simplified }) => {
 }
 
 
+export default News;

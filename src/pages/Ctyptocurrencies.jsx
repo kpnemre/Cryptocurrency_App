@@ -5,7 +5,7 @@ import { Card, Row, Col, Input, Spin } from "antd";
 import { useGetCryptosQuery } from "../services/cyrptoApi";
 
 
-export const Ctyptocurrencies = ({simplified}) => {
+ const Ctyptocurrencies = ({simplified}) => {
 const count = simplified ? 10:100
     const [searchTerm, setSearchTerm] = useState('');
   const { data, isFetching } = useGetCryptosQuery(count);
@@ -59,6 +59,8 @@ const count = simplified ? 10:100
     </>
   );
 };
+
+export default  Ctyptocurrencies;
 
 // approvedSupply: true
 // change: 0.74

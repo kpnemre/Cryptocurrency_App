@@ -3,11 +3,13 @@ import { Alert, Col, Row, Spin, Statistic, Typography } from "antd";
 import { useGetCryptosQuery } from "../services/cyrptoApi";
 import millify from "millify";
 import { Link } from "react-router-dom";
-import {Ctyptocurrencies, News } from "./index"
+// import {Ctyptocurrencies, News } from "./index"
+import Ctyptocurrencies from "./Ctyptocurrencies";
+import News from "./News";
 
 const { Title } = Typography;
 
-export const Homepage = () => {
+const Homepage = () => {
   const { data, isLoading, isError } = useGetCryptosQuery(10);
 
   const globalStats = data?.data?.stats;
@@ -47,3 +49,5 @@ export const Homepage = () => {
     </>
   );
 };
+
+export default Homepage;
